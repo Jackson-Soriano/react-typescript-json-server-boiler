@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const searchPanel = ({param, setParam}) => {
-    const [users, setUsers] = useState([]);
+const SearchPanel = ({users, param, setParam}) => {
     return (
         <form action={''}>
             <div>
@@ -36,4 +35,4 @@ const searchPanel = ({param, setParam}) => {
     );
 }
 
-export default searchPanel;
+export default SearchPanel;

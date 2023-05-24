@@ -1,6 +1,6 @@
 import React from 'react';
 
-const List = ({list}) => {
+const List = ({users, list}) => {
   return (
     <div align={"center"}>
       <table style={{border: "1.5px solid rgb(200, 200, 200)"}}>
@@ -17,7 +17,8 @@ const List = ({list}) => {
               {project.name}
             </td>
             <td style={{border: "1px solid rgb(190, 190, 190)", backgroundColor: "rgb(215, 217, 215)"}}>
-              {project.personName}
+              {/*show name if found else unknown*/}
+              {users.find(user => user.id === project.personId)?.name || "Unknown"}
             </td>
           </tr>)
         }
